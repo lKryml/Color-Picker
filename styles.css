@@ -1,0 +1,67 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg: #1F293A;
+    --footer-col: #D5D4D8;
+    --eyedrop-1: #313131;
+    --eyedrop-2: #D1D5DB;
+    --btn: #3D4B60
+}
+
+.container {
+    background: var(--main-bg);
+    width: 100vw;
+    height: 100vh
+}
+
+.picker {
+    border: solid 1px var(--eyedrop-2);
+    width: 61px;
+    height: 43px;
+}
+
+select {
+    border: 1px solid #FFFDFE;
+    border-radius: 5px;
+    background: transparent;
+    color: #FFFDFE;
+    width: 312px;
+    height: 42px;
+    display: inline-block;
+
+}
+
+option {
+    /* Whatever color  you want */
+    background-color: var(--main-bg);
+    outline: 0px;
+    border: 0px;
+}
+
+.nav {
+
+    border: 1px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.colors-container {
+    width: 500px;
+    height: 500px;
+    border: 1px white solid;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.rectangle {
+    height: 500px;
+    width: 110px;
+}
