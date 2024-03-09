@@ -9,6 +9,7 @@ const colorsContainer = document.getElementById("colors-container");
 
 let schemeHTML = "";
 let colorsArray = [];
+
 getColorBtn.addEventListener("click", () => {
   fetch(`${baseURL}scheme?hex=${colPicker.value.slice(
     1
@@ -24,10 +25,17 @@ getColorBtn.addEventListener("click", () => {
       colorsArray.forEach((color, index) => {
         schemeHTML += `<div class="rectangle" id="rec${
           index + 1
-        }" style="background-color:${color.hex.value}"><p>${
-          color.hex.value
-        } </p></div>`;
+        }" style="background-color:${color.hex.value}"><p id=recText${
+          index + 1
+        }>${color.hex.value} </p></div>`;
       });
       colorsContainer.innerHTML = schemeHTML;
+      for (let i = 0; i < 5; i++) {
+        document.getElementById(`rec${i + 1}`).addEventListener("click", () => {
+          navigator.clipboard.writeText(
+            document.getElementById(`recText${i + 1}`).innerText
+          );
+        });
+      }
     });
 });
