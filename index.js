@@ -2,7 +2,6 @@
 const colPicker = document.getElementById("colpicker");
 const getColorBtn = document.getElementById("getColorBtn");
 const tester = document.getElementById("tester");
-
 const baseURL = "https://www.thecolorapi.com/";
 const modeSelector = document.getElementById("modeSelector");
 const colorsContainer = document.getElementById("colors-container");

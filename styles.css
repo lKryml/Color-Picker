@@ -17,7 +17,6 @@ html, body {
     background: var(--main-bg);
     width: 100vw;
     height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,19 +39,15 @@ select {
     height: 42px;
     display: inline-block;
     cursor: pointer;
-
 }
 
 option {
-
     background-color: var(--main-bg);
     outline: 0px;
     border: 0px;
 }
 
 .nav {
-
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,11 +74,9 @@ option {
     position: relative;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 0.5px;
-
 }
 
 p {
-
     align-self: flex-end;
     margin-left: 15px;
     justify-self: flex-end;
@@ -101,7 +94,6 @@ button {
     font-weight: 500;
     font-size: 13px;
     cursor: pointer;
-
 }
 
 .toast-container {
