@@ -4,16 +4,23 @@ const getColorBtn = document.getElementById("getColorBtn");
 const tester = document.getElementById("tester");
 
 const baseURL = "https://www.thecolorapi.com/";
-
+const modeSelector = document.getElementById("modeSelector");
 const colorsContainer = document.getElementById("colors-container");
-
+const toastDisplay = document.querySelector(".toast_inner");
 let schemeHTML = "";
 let colorsArray = [];
+
+function toggleToast() {
+  toastDisplay.style.display = "flex";
+  setTimeout(() => {
+    toastDisplay.style.display = "none";
+  }, 1000);
+}
 
 getColorBtn.addEventListener("click", () => {
   fetch(`${baseURL}scheme?hex=${colPicker.value.slice(
     1
-  )}&mode=monochrome&count=5
+  )}&mode=${modeSelector.value.toLowerCase()}&count=5
   `)
     .then((res) => res.json())
     .then((data) => {
@@ -35,6 +42,7 @@ getColorBtn.addEventListener("click", () => {
           navigator.clipboard.writeText(
             document.getElementById(`recText${i + 1}`).innerText
           );
+          toggleToast();
         });
       }
     });

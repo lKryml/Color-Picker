@@ -2,6 +2,7 @@ html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Inter';
 }
 
 :root {
@@ -9,7 +10,7 @@ html, body {
     --footer-col: #D5D4D8;
     --eyedrop-1: #313131;
     --eyedrop-2: #D1D5DB;
-    --btn: #3D4B60
+    --btn: #3D4B60;
 }
 
 .container {
@@ -27,6 +28,7 @@ html, body {
     border: solid 1px var(--eyedrop-2);
     width: 61px;
     height: 43px;
+    cursor: pointer;
 }
 
 select {
@@ -37,11 +39,12 @@ select {
     width: 312px;
     height: 42px;
     display: inline-block;
+    cursor: pointer;
 
 }
 
 option {
-    /* Whatever color  you want */
+
     background-color: var(--main-bg);
     outline: 0px;
     border: 0px;
@@ -59,11 +62,12 @@ option {
 .colors-container {
     width: 500px;
     height: 500px;
-    border: 1px white solid;
+
     margin: 0 auto;
     margin-top: 15px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 
 }
 
@@ -71,13 +75,65 @@ option {
 .rectangle {
     height: 500px;
     width: 110px;
-
     display: flex;
+    position: relative;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5px;
+
 }
 
 p {
 
     align-self: flex-end;
-    margin-left: 20px;
+    margin-left: 15px;
     justify-self: flex-end;
+    color: var(--footer-col);
+    position: absolute;
+    bottom: -50px;
+}
+
+button {
+    border: none;
+    padding: 13px 25px;
+    border-radius: 5px;
+    background-color: var(--btn);
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+
+}
+
+.toast-container {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    display: flex;
+    z-index: 999999;
+    flex-flow: column;
+    align-items: flex-start;
+    max-width: calc(100% - 60px);
+    transform: translate3d(-50%, 0, 0);
+}
+
+.toast {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toast_inner {
+    padding: 0 20px;
+    border-radius: 10px;
+    position: relative;
+    display: none;
+    align-items: center;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 14px;
+}
+
+.toast--success .toast_inner {
+    background: black;
+    color: white;
 }
